@@ -4,15 +4,15 @@ export default function Hero() {
       <nav className="mx-auto flex max-w-7xl items-center justify-between">
         <div className="flex items-center gap-2">
           <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-gold-400 to-violet-500 font-display text-lg font-bold text-ink-950">
-            T
+            A
           </div>
-          <span className="font-display text-xl font-bold">Uchqun</span>
+          <span className="font-display text-xl font-bold">AURA</span>
         </div>
         <a
-          href="#forma"
+          href="tel:+998884053097"
           className="rounded-full border border-white/10 bg-white/5 px-5 py-2 text-sm backdrop-blur transition hover:border-gold-400 hover:text-gold-400"
         >
-          Ma'lumot uchun
+          Qo'ng'iroq qilish
         </a>
       </nav>
 
@@ -23,17 +23,17 @@ export default function Hero() {
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75"></span>
               <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-500"></span>
             </span>
-            Yangi guruhga ro&apos;yxat boshlandi
+            20 yildan beri sotuvda
           </div>
 
           <h1
             className="animate-fade-up font-display mt-6 text-5xl font-bold leading-[1.05] sm:text-6xl lg:text-7xl"
             style={{ animationDelay: "0.1s" }}
           >
-            3 oyda{" "}
+            Eng to'g'ri tanlov{" "}
             <span className="relative inline-block">
-              <span className="bg-gradient-to-r from-gold-400 via-gold-400 to-violet-500 bg-clip-text text-transparent">
-                Performance Marketing
+              <span className="bg-gradient-to-r from-gold-400 via-gold-400 to-violet-500 bg-clip-text text-transparent uppercase">
+                ROBOCLEAN pro
               </span>
               <svg
                 className="absolute -bottom-2 left-0 w-full"
@@ -48,16 +48,13 @@ export default function Hero() {
                 />
               </svg>
             </span>{" "}
-            mutaxassisi bo'ling 
           </h1> 
 
           <p
             className="animate-fade-up mt-7 max-w-xl text-lg text-zinc-400 lg:text-xl"
             style={{ animationDelay: "0.2s" }}
           >
-            Noldan boshlab amaliy loyihalar bilan o&apos;rganasiz. Kursni
-            tugatgach <span className="text-white">$700+ daromadli</span>{" "}
-            ish o&apos;rinlariga tayyor bo&apos;lasiz.
+            Tozalik va sog'lom hayot uchun eng yaxshi sarmoya. Endilikda siz uni <span className="text-white">0% muddatli to'lov</span> asosida xarid qilishingiz mumkin. Bepul servis xizmati kafolatlangan!
           </p>
 
           <div
@@ -65,17 +62,17 @@ export default function Hero() {
             style={{ animationDelay: "0.3s" }}
           >
             <a
-              href="#forma"
+              href="tel:+998884053097"
               className="animate-glow group relative inline-flex items-center gap-3 rounded-full bg-gold-400 px-8 py-4 font-semibold text-ink-950 transition hover:bg-gold-500"
             >
-              Bepul darsga yozilish
+              Buyurtma berish
               <span className="transition group-hover:translate-x-1">→</span>
             </a>
             <a
-              href="#price"
+              href="tel:+998884053097"
               className="rounded-full border border-white/10 bg-white/5 px-8 py-4 font-semibold text-white backdrop-blur transition hover:border-white/20"
             >
-              Narxni ko&apos;rish
+              📞 +998 88 405 30 97
             </a>
           </div>
 
@@ -93,57 +90,34 @@ export default function Hero() {
               ))}
             </div>
             <div className="text-sm">
-              <div className="font-semibold text-white">1500+ bitiruvchi</div>
-              <div className="text-zinc-500">⭐ 4.9 / 5.0 reyting</div>
+              <div className="font-semibold text-white">Minglab mamnun mijozlar</div>
+              <div className="text-zinc-500">🔧 Bepul Servis xizmati</div>
             </div>
           </div>
         </div>
 
+        {/* Maxsulot rasmi qismi */}
         <div className="lg:col-span-5">
           <div className="animate-float relative">
+            {/* Rasm orqasidagi chiroyli effekt */}
             <div className="absolute -inset-1 rounded-3xl bg-gradient-to-r from-gold-400 via-violet-500 to-emerald-500 opacity-30 blur-xl"></div>
-            <div className="relative rounded-3xl border border-white/10 bg-ink-900/80 p-8 backdrop-blur-xl">
-              <div className="mb-6 flex items-center justify-between">
-                <span className="text-xs uppercase tracking-widest text-zinc-500">
-                  Aksiya
-                </span>
-                <span className="rounded-full bg-emerald-500/20 px-3 py-1 text-xs text-emerald-400">
-                  -40%
-                </span>
-              </div>
-              <div className="mb-2 text-sm text-zinc-500 line-through">
-                4 800 000 so&apos;m
-              </div>
-              <div className="font-display text-5xl font-bold text-white">
-                2 880 000{" "}
-                <span className="text-base font-normal text-zinc-400">so&apos;m</span>
-              </div>
-              <p className="mt-2 text-sm text-zinc-400">yoki 480 000 so&apos;m × 6 oy</p>
+            
+            {/* Rasm joylashadigan asosiy konteyner */}
+            <div className="relative rounded-3xl border border-white/10 bg-ink-900/80 p-2 backdrop-blur-xl overflow-hidden shadow-2xl">
+              
+              {/* SHU YERGA RASM MANZILINI QO'YING */}
+              <img 
+                src="/sizning-rasmingiz-manzili.jpg" 
+                alt="Roboclean Pro apparati" 
+                className="w-full h-auto object-cover rounded-2xl"
+                // Agar rasmni aniq o'lchamga keltirmoqchi bo'lsangiz quyidagi klasslarni ishlating:
+                // className="w-full aspect-[4/5] object-cover rounded-2xl"
+              />
 
-              <div className="my-6 h-px bg-white/10"></div>
-
-              <ul className="space-y-3 text-sm">
-                {[
-                  "24 haftalik dastur",
-                  "Live video darslar",
-                  "Real loyihalar portfolio",
-                  "Ish topishga yordam",
-                ].map((item) => (
-                  <li key={item} className="flex items-center gap-3">
-                    <span className="flex h-5 w-5 items-center justify-center rounded-full bg-emerald-500/20 text-xs text-emerald-400">
-                      ✓
-                    </span>
-                    {item}
-                  </li>
-                ))}
-              </ul>
-
-              <div className="mt-6 rounded-2xl bg-gold-400/10 p-4 text-sm text-gold-400">
-                ⏰ Aksiya 3 kunda tugaydi
-              </div>
             </div>
           </div>
         </div>
+        
       </div>
     </section>
   );

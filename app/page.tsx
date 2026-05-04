@@ -12,10 +12,10 @@ export default function HomePage() {
   return (
     <main className="relative overflow-x-hidden">
       <Hero />
-      <Results />
-      <About />
+      {/* <Results /> */}
+      {/* <About />
       <Reviews />
-      <Pricing />
+      <Pricing /> */}
       <LeadForm />
 
       <footer className="border-t border-white/5 py-10 text-center text-sm text-zinc-500">

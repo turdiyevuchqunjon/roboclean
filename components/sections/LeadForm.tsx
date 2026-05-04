@@ -33,33 +33,19 @@ export default function LeadForm() {
           <div className="relative grid gap-12 lg:grid-cols-2">
             <div>
               <span className="text-sm font-semibold uppercase tracking-widest text-gold-400">
-                Bepul ariza
+                Forma 
               </span>
               <h2 className="font-display mt-3 text-4xl font-bold leading-tight lg:text-5xl">
-                Bepul tanishuv darsiga{" "}
+                To'liq ma'lumot Olish uchun{" "}
                 <span className="bg-gradient-to-r from-gold-400 to-violet-500 bg-clip-text text-transparent">
-                  yoziling
+                  Formani to'ldiring
                 </span>
               </h2>
               <p className="mt-5 text-zinc-400">
-                Mentorimiz 24 soat ichida siz bilan bog&apos;lanadi va kurs
-                haqida barcha savollarga javob beradi. Hech qanday majburiyat yo&apos;q.
+                Mentorimiz 24 soat ichida siz bilan bog&apos;lanamiz.
               </p>
 
-              <ul className="mt-8 space-y-3 text-sm">
-                {[
-                  "Sizga mos tarif tanlash",
-                  "To'lov bo'lib-bo'lib varianti",
-                  "Bepul 1 darsni sinab ko'rish",
-                ].map((f) => (
-                  <li key={f} className="flex items-center gap-3 text-zinc-300">
-                    <span className="flex h-5 w-5 items-center justify-center rounded-full bg-gold-400/20 text-xs text-gold-400">
-                      ✓
-                    </span>
-                    {f}
-                  </li>
-                ))}
-              </ul>
+           
             </div>
 
             <form onSubmit={onSubmit} className="space-y-4">
