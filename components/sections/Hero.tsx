@@ -107,7 +107,7 @@ export default function Hero() {
               
               {/* SHU YERGA RASM MANZILINI QO'YING */}
               <img 
-                src="/sizning-rasmingiz-manzili.jpg" 
+                src="/rasm.jpg" 
                 alt="Roboclean Pro apparati" 
                 className="w-full h-auto object-cover rounded-2xl"
                 // Agar rasmni aniq o'lchamga keltirmoqchi bo'lsangiz quyidagi klasslarni ishlating:

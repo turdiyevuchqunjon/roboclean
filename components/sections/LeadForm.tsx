@@ -1,9 +1,11 @@
 "use client";
 
+import { useRouter } from "next/navigation";
 import { useState } from "react";
 
 export default function LeadForm() {
-  const [status, setStatus] = useState<"idle" | "loading" | "ok" | "err">("idle");
+  const router = useRouter();
+  const [status, setStatus] = useState<"idle" | "loading" | "err">("idle");
 
   async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -16,8 +18,9 @@ export default function LeadForm() {
         body: JSON.stringify(data),
       });
       if (!res.ok) throw new Error();
-      setStatus("ok");
-      (e.target as HTMLFormElement).reset();
+      
+      // Thanks sahifaga yo'naltirish
+      router.push("/thanks");
     } catch {
       setStatus("err");
     }
@@ -33,19 +36,17 @@ export default function LeadForm() {
           <div className="relative grid gap-12 lg:grid-cols-2">
             <div>
               <span className="text-sm font-semibold uppercase tracking-widest text-gold-400">
-                Forma 
+                Forma
               </span>
               <h2 className="font-display mt-3 text-4xl font-bold leading-tight lg:text-5xl">
-                To'liq ma'lumot Olish uchun{" "}
+                To&apos;liq ma&apos;lumot Olish uchun{" "}
                 <span className="bg-gradient-to-r from-gold-400 to-violet-500 bg-clip-text text-transparent">
-                  Formani to'ldiring
+                  Formani to&apos;ldiring
                 </span>
               </h2>
               <p className="mt-5 text-zinc-400">
                 Mentorimiz 24 soat ichida siz bilan bog&apos;lanamiz.
               </p>
-
-           
             </div>
 
             <form onSubmit={onSubmit} className="space-y-4">
@@ -102,11 +103,6 @@ export default function LeadForm() {
                 {status === "loading" ? "Yuborilmoqda..." : "Arizani yuborish →"}
               </button>
 
-              {status === "ok" && (
-                <div className="rounded-2xl bg-emerald-500/10 p-4 text-center text-sm text-emerald-400">
-                  ✓ Arizangiz qabul qilindi. Tez orada bog&apos;lanamiz.
-                </div>
-              )}
               {status === "err" && (
                 <div className="rounded-2xl bg-red-500/10 p-4 text-center text-sm text-red-400">
                   Xatolik yuz berdi. Qaytadan urinib ko&apos;ring.
