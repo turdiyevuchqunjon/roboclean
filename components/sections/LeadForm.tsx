@@ -68,13 +68,13 @@ async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
                 Forma
               </span>
               <h2 className="font-display mt-3 text-4xl font-bold leading-tight lg:text-5xl">
-                To&apos;liq ma&apos;lumot Olish uchun{" "}
                 <span className="bg-gradient-to-r from-gold-400 to-violet-500 bg-clip-text text-transparent">
+                To&apos;liq ma&apos;lumot Olish uchun{" "}
                   Formani to&apos;ldiring
                 </span>
               </h2>
               <p className="mt-5 text-zinc-400">
-                Mentorimiz 24 soat ichida siz bilan bog&apos;lanamiz.
+                Tez orada siz bilan bog'lanamiz
               </p>
             </div>
 

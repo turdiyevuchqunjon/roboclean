@@ -1,6 +1,6 @@
 import MetaPixel from "@/components/sections/MetaPixel";
 import UTMTracker from "@/components/UTMTracker";
-
+import "./globals.css"; 
 
 export default function RootLayout({
   children,

@@ -20,9 +20,8 @@ export default function HomePage() {
 
       <footer className="border-t border-white/5 py-10 text-center text-sm text-zinc-500">
         © {new Date().getFullYear()} CodePro · Toshkent ·{" "}
-        <a href="tel:+998901234567" className="hover:text-amber-400">
-          +998 90 123 45 67
-        </a>
+        
+   
       </footer>
     </main>
   );
