@@ -1,5 +1,6 @@
 "use client";
 
+import { getFbCookies } from "@/lib/fb-cookies";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 
@@ -7,24 +8,52 @@ export default function LeadForm() {
   const router = useRouter();
   const [status, setStatus] = useState<"idle" | "loading" | "err">("idle");
 
-  async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
-    e.preventDefault();
-    setStatus("loading");
-    const data = Object.fromEntries(new FormData(e.currentTarget));
-    try {
-      const res = await fetch("/api/lead", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data),
-      });
-      if (!res.ok) throw new Error();
-      
-      // Thanks sahifaga yo'naltirish
-      router.push("/thanks");
-    } catch {
-      setStatus("err");
+async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
+  e.preventDefault();
+  setStatus("loading");
+
+  const formData = Object.fromEntries(new FormData(e.currentTarget));
+  const utm = getStoredUTM() ?? {};
+  const fbCookies = getFbCookies() ?? {};
+
+  const eventId =
+    typeof crypto !== "undefined" && crypto.randomUUID
+      ? crypto.randomUUID()
+      : `${Date.now()}-${Math.random().toString(36).slice(2)}`;
+
+  const payload = {
+    ...formData,
+    ...utm,
+    ...fbCookies,
+    eventId,
+    sourceUrl: window.location.href,
+  };
+
+  try {
+    if (typeof window !== "undefined" && (window as any).fbq) {
+      (window as any).fbq(
+        "track",
+        "Lead",
+        {
+          currency: "UZS",
+          value: 0,
+        },
+        { eventID: eventId }
+      );
     }
+
+    const res = await fetch("/api/lead", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(payload),
+    });
+    if (!res.ok) throw new Error();
+
+    router.push("/thanks");
+  } catch {
+    setStatus("err");
   }
+}
 
   return (
     <section id="forma" className="relative px-6 py-24 lg:px-12 lg:py-32">
@@ -118,4 +147,8 @@ export default function LeadForm() {
       </div>
     </section>
   );
+}
+
+function getStoredUTM() {
+  throw new Error("Function not implemented.");
 }
