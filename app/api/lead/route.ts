@@ -75,19 +75,10 @@ export async function POST(req: Request) {
       phone,
       address,
       age,
-      utm_source: clean(body.utm_source),
-      utm_medium: clean(body.utm_medium),
       utm_campaign: clean(body.utm_campaign),
       utm_term: clean(body.utm_term),
       utm_content: clean(body.utm_content),
-      referrer: clean(body.referrer),
-      landing_page: clean(body.landing_page),
-      fbc: clean(body.fbc),
-      fbp: clean(body.fbp),
-      sourceUrl: clean(body.sourceUrl),
-      clientIp,
-      userAgent,
-      eventId,
+     
     });
 
     if (!telegramResult.ok) {
