@@ -6,11 +6,11 @@ export default function Hero() {
           <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-gold-400 to-violet-500 font-display text-lg font-bold text-ink-950">
             A
           </div>
-          <span className="font-display text-xl font-bold">AURA</span>
+          <span className="font-display text-xl text-white font-bold">AURA</span>
         </div>
         <a
           href="tel:+998884053097"
-          className="rounded-full border border-white/10 bg-white/5 px-5 py-2 text-sm backdrop-blur transition hover:border-gold-400 hover:text-gold-400"
+          className="rounded-full border border-white/30 bg-white/5 text-white px-5 py-2 text-sm backdrop-blur transition hover:border-gold-400 hover:text-gold-400"
         >
           Qo'ng'iroq qilish
         </a>
@@ -30,9 +30,9 @@ export default function Hero() {
             className="animate-fade-up font-display mt-6 text-5xl font-bold leading-[1.05] sm:text-6xl lg:text-7xl"
             style={{ animationDelay: "0.1s" }}
           >
-            Eng to'g'ri tanlov{" "}
             <span className="relative inline-block">
               <span className="bg-gradient-to-r from-gold-400 via-gold-400 to-violet-500 bg-clip-text text-transparent uppercase">
+            Eng to'g'ri tanlov{" "}
                 ROBOCLEAN pro
               </span>
               <svg
