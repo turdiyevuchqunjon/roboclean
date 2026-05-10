@@ -152,7 +152,7 @@ export default function LeadForm() {
                   />
                 </div>
 
-                <div>
+                {/* <div>
                   <label className="mb-2 block text-sm text-zinc-400">
                     Yoshi
                   </label>
@@ -165,7 +165,7 @@ export default function LeadForm() {
                     placeholder="22"
                     className="w-full rounded-2xl border border-white/10 bg-ink-950/60 px-5 py-4 text-white placeholder:text-zinc-600 focus:border-gold-400 focus:outline-none focus:ring-2 focus:ring-gold-400/30"
                   />
-                </div>
+                </div> */}
               </div>
 
               <button
