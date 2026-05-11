@@ -113,7 +113,7 @@ export default function LeadForm() {
               </p>
             </div>
 
-            <form onSubmit={onSubmit} className="space-y-4">
+            <form onSubmit={onSubmit} className="space-y-4" id="form">
               <div>
                 <label className="mb-2 block text-sm text-zinc-400">
                   Ism Familya

@@ -62,18 +62,13 @@ export default function Hero() {
             style={{ animationDelay: "0.3s" }}
           >
             <a
-              href="tel:+998884053097"
+              href="#form"
               className="animate-glow group relative inline-flex items-center gap-3 rounded-full bg-gold-400 px-8 py-4 font-semibold text-ink-950 transition hover:bg-gold-500"
             >
               Buyurtma berish
               <span className="transition group-hover:translate-x-1">→</span>
             </a>
-            <a
-              href="tel:+998884053097"
-              className="rounded-full border border-white/10 bg-white/5 px-8 py-4 font-semibold text-white backdrop-blur transition hover:border-white/20"
-            >
-              📞 +998 88 405 30 97
-            </a>
+           
           </div>
 
           <div
